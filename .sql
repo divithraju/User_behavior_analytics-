@@ -41,3 +41,17 @@ CREATE TABLE events (
     product_id INT REFERENCES products(product_id),
     event_time TIMESTAMP
 );
+
+
+\COPY users FROM '~/Downloads/users.csv' DELIMITER ',' CSV HEADER;
+\COPY products FROM '~/Downloads/products.csv' DELIMITER ',' CSV HEADER;
+\COPY campaigns FROM '~/Downloads/campaigns.csv' DELIMITER ',' CSV HEADER;
+\COPY sessions FROM '~/Downloads/sessions.csv' DELIMITER ',' CSV HEADER;
+\COPY events FROM '~/Downloads/events.csv' DELIMITER ',' CSV HEADER;
+
+SELECT COUNT(*) FROM users;
+SELECT COUNT(*) FROM products;
+SELECT COUNT(*) FROM campaigns;
+SELECT COUNT(*) FROM sessions;
+SELECT COUNT(*) FROM events;
+
